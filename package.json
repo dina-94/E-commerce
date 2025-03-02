@@ -2,7 +2,7 @@
   "name": "new",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://dina-94.github.io/E-commerce",
+  "homepage": "https://dina-94.github.io/e-commerce",
   "type": "module",
   "scripts": {
     "dev": "vite",
