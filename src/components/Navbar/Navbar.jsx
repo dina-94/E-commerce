@@ -20,7 +20,7 @@ let navigate = useNavigate();
 function Signout(){
   localStorage.removeItem("userToken");
   setuserLogin(null);
-  navigate("/login")
+  navigate("login")
 }
 
 
