@@ -30,7 +30,7 @@ import WishListtContextProvider from './context/WishListContext';
 
 
 let x = createBrowserRouter([
-  {path: "E-commerce" , element : <Layout /> ,
+  {path: "e-commerce" , element : <Layout /> ,
      children: [
     {index : true , element: <ProtectedRoute><Home /> </ProtectedRoute> },
     {path: "productdetails/:id/:category" , element: <ProtectedRoute><ProductDetails /></ProtectedRoute>  },
