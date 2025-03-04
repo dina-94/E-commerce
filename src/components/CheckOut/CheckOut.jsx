@@ -22,7 +22,7 @@ let formik = useFormik({
       city: "",
   },
 
-  onSubmit : ()=>handleCheckOut( cartId, `http://localhost:5173`) ,
+  onSubmit : ()=>handleCheckOut( cartId, `http://localhost:5173%23`) ,
 });
 
 

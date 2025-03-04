@@ -72,12 +72,12 @@ useEffect(()=> {uCart()},[])
             <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row bg-green-100 gap-4  absolute lg:static  w-full m-auto top-full right-0`}>
                 
             <li><Link className='text-slate-800 hover:text-green-500 ' to="">Home</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="recentproducts">Products</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="categories">Categories</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="brands">Brands</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="allorders">All Orders</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="wishlist">Wish List</Link></li>
-               <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="cart"> Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i>{carNum>0&&carNum}</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/recentproducts">Products</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/categories">Categories</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/brands">Brands</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/allorders">All Orders</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/wishlist">Wish List</Link></li>
+               <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/cart"> Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i>{carNum>0&&carNum}</Link></li>
  </ul></>:null}
      
       </div>
