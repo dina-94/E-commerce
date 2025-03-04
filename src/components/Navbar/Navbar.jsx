@@ -13,6 +13,7 @@ export default function Navbar() {
 
 let navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setisScrolled] = useState(false)
 
   let {userLogin , setuserLogin} = useContext(UserContext)
   let{getUserCart , carNum} = useContext(CartContext)
@@ -22,6 +23,18 @@ function Signout(){
   setuserLogin(null);
   navigate("login")
 }
+
+
+function handleScroll(){
+  if (window.scrollY > 45) {
+    setisScrolled(true);
+  } else {
+    setisScrolled(false);
+  }
+
+}
+
+  window.addEventListener("scroll", handleScroll);
 
 
 async function uCart(){
@@ -37,11 +50,17 @@ async function uCart(){
 }
 
 
-useEffect(()=> {uCart()},[])
+useEffect(()=> {uCart(),
+  window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+},[])
 
   return (
   <>
-<nav className="bg-green-100  fixed text-center top-0 left-0 right-0 shadow-md z-10 ">
+<nav className= {` fixed text-center top-0 left-0 right-0 shadow-md z-10 transition-all duration-300 ${isScrolled? "bg-green-200":"bg-gradient-to-r from-blue-500/60 to-green-500/60"}`}>
 
 
     <div className="row flex lg:flex-row gap-3  justify-between items-center mx-auto max-w-screen-xl p-4">
@@ -69,15 +88,15 @@ useEffect(()=> {uCart()},[])
      <><button className="lg:hidden  " onClick={() => setIsOpen(!isOpen)}>
               ☰
             </button>
-            <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row bg-green-100 gap-4  absolute lg:static  w-full m-auto top-full right-0`}>
+            <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row  gap-4  absolute lg:static  w-full m-auto top-full right-0`}>
                 
-            <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="">Home</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/recentproducts">Products</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/categories">Categories</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/brands">Brands</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/allorders">All Orders</Link></li>
-  <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/wishlist">Wish List</Link></li>
-               <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/cart"> Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i>{carNum>0&&carNum}</Link></li>
+            <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="">Home</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/recentproducts">Products</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/categories">Categories</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/brands">Brands</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/allorders">All Orders</Link></li>
+  <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/wishlist">Wish List</Link></li>
+               <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/cart"> Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i>{carNum>0&&carNum}</Link></li>
  </ul></>:null}
      
       </div>
@@ -91,10 +110,10 @@ useEffect(()=> {uCart()},[])
 
 <div className='flex gap-4'>
 
-{userLogin != null? <span onClick={Signout} className='cursor-pointer hover:text-green-500'>Sign out</span> :
+{userLogin != null? <span onClick={Signout} className='cursor-pointer hover:text-green-700'>Sign out</span> :
 <>
-<Link to ="login" className='cursor-pointer hover:text-green-500'>Login</Link>
-  <Link to ="register" className='cursor-pointer hover:text-green-500'>Register</Link> 
+<Link to ="login" className='cursor-pointer hover:text-green-700 text-lg'>Login</Link>
+  <Link to ="register" className='cursor-pointer hover:text-green-700 text-lg'>Sign Up</Link> 
 </>
 }
  

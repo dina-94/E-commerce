@@ -194,7 +194,7 @@ useEffect(()=>{
 </div>
 
 
-<div className="w-full lg:w-3/4 text-left p-4">
+<div className="w-full lg:w-3/4 text-left p-4 ">
 <h3 className='font-semibold text-3xl mb-2 capitalize '>{sproduct?.title}</h3>
 <h4 className='mb-4 text-gray-600 '>{sproduct?.description}</h4>
 <h4 className='mt-2 mb-1 text-emerald-500'>{sproduct?.category.name}</h4>
@@ -234,8 +234,8 @@ useEffect(()=>{
 <div className="row w-[90%] m-auto">
 
  {relatedproducts.length>0 ? relatedproducts.map((product)=> 
- <div key={product.id} className='w-full  lg:h-full  lg:w-1/4 md:w-1/2'>
- <div className=' border border-spacing-2  border-green-300 p-2 h-[600px] lg:h-full product mx-2 my-2 m-auto text-left rounded-md hover:shadow-green-300 hover:transition-shadow duration-500 hover:shadow-lg '>
+ <div key={product.id} className='w-full  lg:h-full  lg:w-1/4 md:w-1/2 '>
+ <div className=' border border-spacing-2 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-green-500/20   border-green-300 p-2 h-[600px] lg:h-full product mx-2 my-2 m-auto text-left rounded-md  hover:transition-shadow duration-500 '>
    <Link to = {`/productdetails/${product.id}/${product.category.name}`}>
 
   <img src={product.imageCover} alt="products"  className='h-[400px] lg:h-full w-full m-auto object-cover'/>

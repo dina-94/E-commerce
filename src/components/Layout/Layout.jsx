@@ -12,7 +12,7 @@ export default function Layout() {
   <>
   <Navbar/>
 
-<div className='container text-center min-h-screen mx-auto w-full py-20 lg:py-16 overflow-hidden'>
+<div  className='container text-center min-h-screen mx-auto w-full py-14 overflow-hidden '>
 <Outlet/>
 
 </div>

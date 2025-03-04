@@ -195,7 +195,7 @@ useEffect(()=>{getProducts()} , [])
 
  {products.length>0 ? products.map((product)=> 
  <div key={product.id} className='w-full lg:w-1/4 md:w-1/3 p-1'>
- <div className='product p-2 m-2 mb-5 text-left border-2 border-green-400 rounded-md hover:shadow-green-300  duration-500 hover:shadow-lg transform transition-transform hover:transform hover:scale-105'>
+ <div className='product p-2 m-2 mb-5 text-left hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-green-500/20 border-2 border-green-400 rounded-md  duration-700 transform transition-transform hover:transform hover:scale-105'>
    <Link to = {`/productdetails/${product.id}/${product.category.name}`}>
 
   <img src={product.imageCover} alt="products"  className='h-[320px] m-auto'/>

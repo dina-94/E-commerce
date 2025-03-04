@@ -81,8 +81,9 @@ useEffect(() => {
   <> 
   {allOrders?.length > 0 ?
    <div  className='w-full min-h-screen '>
-    
-  <div className='lg:w-[95%] m-auto w-full mt-16 rounded-lg '>
+    <h1 className='font-bold text-4xl text-green-500 items-center mt-12'>My Orders </h1>
+
+  <div className='lg:w-[95%] m-auto w-full mt-14 rounded-lg '>
 {allOrders.map((order)=> order.cartItems.length>0 ?
 
    <div key={order._id} className='' >
@@ -98,7 +99,7 @@ useEffect(() => {
 
 {order.cartItems.length> 0 ?order.cartItems.map((item)=>
    
-<div key={item._id} className='row flex lg:w-1/4 flex-col m-auto mb-2  bg-green-100 items-center border shadow-md border-spacing-2 border-green-100 rounded-2xl '>
+<div key={item._id} className='row flex lg:w-1/4 flex-col m-auto mb-2  items-center border shadow-md border-spacing-3 bg-gradient-to-r from-blue-500/20 to-green-500/20  border-green-300 rounded-2xl '>
 
 
   <div  className=" p-5 lg:p-0  "> 

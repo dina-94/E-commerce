@@ -87,15 +87,15 @@ validationSchema : myValidation ,
 
 {ApiError? <div className='w-1/3 rounded mx-auto bg-emerald-500 text-white p-1 m-4'> {ApiError}</div>: null}
 
-<h2 className='font-bold text-2xl text-center my-4 text-emerald-700'>Register Now </h2>
 
- <form onSubmit={formik.handleSubmit} className="w-7/12 mx-auto">
+ <form onSubmit={formik.handleSubmit} className="w-10/12 lg:w-5/12 m-auto bg-gradient-to-r from-blue-500/30 to-green-500/30 mt-10 lg:mt-20 rounded-3xl p-4 ">
+ <h2 className='font-bold text-2xl text-center mb-8 text-emerald-700'>Register Now </h2>
 
   <div className="relative z-0 w-full mb-5 group">
       <input type="text" name="name" id="name" value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur}
       
   className="block py-2.5 px-0 w-full text-sm text-teal-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-700-600 peer" placeholder=" " required />
-      <label htmlFor="name" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
+      <label htmlFor="name" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  bg-transparent duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Name</label>
   
 {formik.errors.name && formik.touched.name?       <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
   <span className="font-medium">{formik.errors.name}</span> 
@@ -108,7 +108,7 @@ validationSchema : myValidation ,
       <input type="email" name="email" id="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur}
       
   className="block py-2.5 px-0 w-full text-sm text-teal-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-700-600 peer" placeholder=" " required />
-      <label htmlFor="email" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+      <label htmlFor="email" className="peer-focus:font-medium   left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Email address</label>
  
  
       {formik.errors.email && formik.touched.email?       <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
@@ -123,8 +123,8 @@ validationSchema : myValidation ,
   <div className="relative z-0 w-full mb-5 group">
       <input type="password" name="password" id="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur}
       
-  className="block py-2.5 px-0 w-full text-sm text-teal-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-700-600 peer" placeholder=" " required />
-      <label htmlFor="password" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter your password</label>
+  className="block py-2.5 px-0 w-full text-sm text-teal-700 bg-transparent  border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-700-600 peer" placeholder=" " required />
+      <label htmlFor="password" className="peer-focus:font-medium  left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Enter your password</label>
   
       {formik.errors.password && formik.touched.password?       <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
   <span className="font-medium">{formik.errors.password}</span> 
@@ -137,7 +137,7 @@ validationSchema : myValidation ,
       <input type="rePassword" name="rePassword" id="rePassword" value={formik.values.rePassword} onChange={formik.handleChange} onBlur={formik.handleBlur}
       
   className="block py-2.5 px-0 w-full text-sm text-teal-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-700-600 peer" placeholder=" " required />
-      <label htmlFor="rePassword" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter repassword</label>
+      <label htmlFor="rePassword" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Enter repassword</label>
   
       {formik.errors.rePassword && formik.touched.rePassword?       <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
   <span className="font-medium">{formik.errors.rePassword}</span> 
@@ -150,7 +150,7 @@ validationSchema : myValidation ,
       <input type="tel" name="phone" id="phone" value={formik.values.phone} onChange={formik.handleChange} onBlur={formik.handleBlur}
       
   className="block py-2.5 px-0 w-full text-sm text-teal-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-teal-700-600 peer" placeholder=" " required />
-      <label htmlFor="phone" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter your phone</label>
+      <label htmlFor="phone" className="peer-focus:font-medium left-0 absolute text-sm text-teal-700  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-700-600 peer-focus:dark:text-teal-700-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">Enter your phone</label>
   
       {formik.errors.phone && formik.touched.phone?       <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
   <span className="font-medium">{formik.errors.phone}</span> 

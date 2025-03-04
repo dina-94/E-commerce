@@ -26,7 +26,7 @@ export default function MainSlider() {
 
   return(
   <>
-<div className="row m-auto lg:w-[90%] w-full mb-5 lg:mt-0 mt-3">
+<div className="row m-auto lg:w-[90%] w-full mb-5 mt-0">
   <div className='w-3/4 '>
   <Slider {...settings}>
  <img src={slider4} alt="freshcart" className='w-full lg:h-[400px] h-[250px] lg:object-cover object-fill'/>

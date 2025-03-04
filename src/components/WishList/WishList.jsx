@@ -163,7 +163,7 @@ useEffect(()=>{getWishListItems() }, [])
 
 {wishlistDetails?.map((wish)=> 
 <>
-  <div key={wish._id} className='lg:w-[80%] m-auto w-[85%] bg-emerald-50 mb-5 rounded-lg  hover:shadow-lg hover:shadow-green-100 border-2 border-green-300 '>
+  <div key={wish._id} className='lg:w-[80%] m-auto w-[85%] bg-transparent hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-green-500/20 mb-5 rounded-lg  hover:shadow-lg hover:shadow-green-100 border-2 border-green-300 transform transition-transform hover:transform hover:scale-105 duration-500'>
 
 <div  className='row w-full rounded-lg items-center justify-center lg:justify-between m-auto gap-2 p-6 ' >
 

@@ -114,7 +114,7 @@ useEffect(()=>{
 
 <h1 className='font-bold text-4xl text-green-500 items-center pb-6'>My Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i> </h1>
 
-<div className="row mt-6 lg:flex-row flex-col mb-5 bg-green-50 items-center rounded-2xl lg:justify-between w-[95%] lg:w-[80%]  m-auto">
+<div className="row mt-6 lg:flex-row flex-col mb-5 bg-gradient bg-green-500/30 items-center border border-green-300 rounded-2xl lg:justify-between w-[95%] lg:w-[80%]  m-auto">
   
 
 <div>
@@ -125,7 +125,7 @@ useEffect(()=>{
 
 <div>
 <Link  to={`/checkout`}>
-<button className='btn  text-xl m-1'>Check Out <i className="fa-solid fa-money-check text-xl"/></button>
+<button className='btn hover:bg-green-500 text-xl m-1'>Check Out <i className="fa-solid fa-money-check text-xl"/></button>
 </Link>
 
 <button onClick={()=>clearUserCart()} className='btn text-xl m-1 hover:bg-red-600'>Clear Cart Items <i className="fa-solid fa-trash-can"/></button>
@@ -145,7 +145,7 @@ useEffect(()=>{
 
 {cartDetails?.data?.products?.map((product)=>
 
-   <div key={product.product.id} className='row border bg-emerald-50 lg:w-[80%] lg:mb-4  mb-4 rounded-xl border-green-300 lg:flex-row flex-col w-[95%] p-20 items-center m-auto' >
+   <div key={product.product.id} className='row border bg-transparent hover:bg-gradient-to-r hover:from-blue-500/30 hover:to-green-500/30 lg:w-[80%] lg:mb-4  mb-4 rounded-xl border-green-300 lg:flex-row flex-col w-[95%] p-20 items-center m-auto transform transition-transform hover:transform hover:scale-105 duration-500' >
  <div className='mx-5 p-5 lg:mx-10 lg:p-0'> 
     <img src={product.product.imageCover} alt="freshcart" className=' m-auto lg:w-[200px] lg:h-[260px] object-cover ' />
   </div>
