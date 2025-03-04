@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import style from "./WishList.module.css"
 import { WishListContext } from '../../context/WishListContext'
 import toast from 'react-hot-toast'
 import { CartContext } from '../../context/CartContext'
@@ -22,7 +21,7 @@ const [isRed, setisRed] = useState([])
 
 
 
-let{addProductToWishList , getUserWishList , deleteWishListI }= useContext(WishListContext)
+let{ getUserWishList , deleteWishListI }= useContext(WishListContext)
 
 let {addProductToCart}= useContext(CartContext)
 

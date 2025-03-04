@@ -77,7 +77,7 @@ useEffect(()=> {uCart()},[])
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/brands">Brands</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/allorders">All Orders</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/wishlist">Wish List</Link></li>
-               <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/e-commerce/cart"> Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i>{carNum>0&&carNum}</Link></li>
+               <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/cart"> Cart <i className="fa-solid fa-cart-plus" style={{color: '#22c55e'}}></i>{carNum>0&&carNum}</Link></li>
  </ul></>:null}
      
       </div>
