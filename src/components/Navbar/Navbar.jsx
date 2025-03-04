@@ -88,7 +88,7 @@ useEffect(()=> {uCart(),
      <><button className="lg:hidden  " onClick={() => setIsOpen(!isOpen)}>
               ☰
             </button>
-            <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row  gap-4  bg-green-100 absolute lg:static  w-full m-auto top-full right-0`}>
+            <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row  gap-4 bg-green-100 lg:bg-transparent  absolute lg:static  w-full m-auto top-full right-0`}>
                 
             <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="">Home</Link></li>
   <li><Link className='text-slate-800 hover:text-green-700 text-lg' onClick={() => setIsOpen(false)} to="/recentproducts">Products</Link></li>
