@@ -71,7 +71,7 @@ useEffect(()=> {uCart()},[])
             </button>
             <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row bg-green-100 gap-4  absolute lg:static  w-full m-auto top-full right-0`}>
                 
-            <li><Link className='text-slate-800 hover:text-green-500 ' to="">Home</Link></li>
+            <li><Link className='text-slate-800 hover:text-green-500 ' to="/e-commerce">Home</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/e-commerce/recentproducts">Products</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/e-commerce/categories">Categories</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/e-commerce/brands">Brands</Link></li>
