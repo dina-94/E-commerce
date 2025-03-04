@@ -201,7 +201,7 @@ useEffect(()=>{getWishListItems() }, [])
 )}
 
 
-</div>: <div className="row mt-16"><h3 className=' bg-gray-50 w-[80%] mt-16 rounded-lg m-auto font-semibold text-3xl p-40 text-gray-600'> Your Wishlist Is Empty <i className="fa-solid fa-hourglass fa-lg mt-6" style={{color: '#59ee8d'}} /></h3></div>} </>
+</div>: <div className="row mt-16"><h3 className=' bg-gradient-to-r from-blue-500/20 to-green-500/20 w-[90%] lg:w-[80%] mt-16 rounded-lg m-auto font-semibold text-3xl p-40 text-gray-600'> Your Wishlist Is Empty <i className="fa-solid fa-hourglass fa-lg mt-6" style={{color: '#59ee8d'}} /></h3></div>} </>
 }
   </>
 }
