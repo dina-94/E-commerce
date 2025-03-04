@@ -32,7 +32,7 @@ import WishListtContextProvider from './context/WishListContext';
 
 
 let x = createHashRouter([
-  {path: "" , element : <Layout /> ,
+  {path: "e-commerce" , element : <Layout /> ,
      children: [
     {index : true , element: <ProtectedRoute><Home /> </ProtectedRoute> },
     {path: "productdetails/:id/:category" , element: <ProtectedRoute><ProductDetails /></ProtectedRoute>  },
