@@ -22,7 +22,7 @@ let formik = useFormik({
       city: "",
   },
 
-  onSubmit : ()=>handleCheckOut( cartId, `https://e-commerce-self-mu-66.vercel.app`) ,
+  onSubmit : ()=>handleCheckOut( cartId, `https://e-commerce-self-mu-66.vercel.app%23`) ,
 });
 
 
