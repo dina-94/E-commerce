@@ -44,7 +44,7 @@ useEffect(()=> {uCart()},[])
 <nav className="bg-green-100  fixed text-center top-0 left-0 right-0 shadow-md z-10 ">
 
 
-    <div className="row flex flex-col lg:flex-row gap-3  lg:justify-between items-center mx-auto max-w-screen-xl p-4">
+    <div className="row flex lg:flex-row gap-3  justify-between items-center mx-auto max-w-screen-xl p-4">
 
 
 <div className='flex-col lg:flex-row items-center gap-4'>
@@ -71,7 +71,7 @@ useEffect(()=> {uCart()},[])
             </button>
             <ul className={`${isOpen ? "block" : "hidden"} lg:flex flex-col lg:flex-row bg-green-100 gap-4  absolute lg:static  w-full m-auto top-full right-0`}>
                 
-            <li><Link className='text-slate-800 hover:text-green-500 ' to="">Home</Link></li>
+            <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="">Home</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/recentproducts">Products</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/categories">Categories</Link></li>
   <li><Link className='text-slate-800 hover:text-green-500 ' onClick={() => setIsOpen(false)} to="/brands">Brands</Link></li>
@@ -81,13 +81,12 @@ useEffect(()=> {uCart()},[])
  </ul></>:null}
      
       </div>
-  <div className="lg:flex items-center space-x-6 rtl:space-x-reverse hidden ">
+
+
+  <div className="lg:flex items-center space-x-6 lg:rtl:space-x-reverse  ">
             
 
-     
-
-
-
+    
 
 
 <div className='flex gap-4'>

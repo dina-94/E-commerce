@@ -191,16 +191,16 @@ useEffect(()=>{getProducts()} , [])
 
   <h1 className='font-bold text-4xl text-green-600 '>All Products</h1>
 
-<div className="row w-[90%] m-auto">
+<div className="row w-[85%] lg:w-[90%] m-auto">
 
  {products.length>0 ? products.map((product)=> 
- <div key={product.id} className='w-full lg:w-1/4 md:w-1/2 '>
- <div className='product p-2 m-2 mb-5 text-left border-2 border-green-400 rounded-md hover:shadow-green-300 transition-shadow duration-500 hover:shadow-lg '>
+ <div key={product.id} className='w-full lg:w-1/4 md:w-1/3 p-1'>
+ <div className='product p-2 m-2 mb-5 text-left border-2 border-green-400 rounded-md hover:shadow-green-300  duration-500 hover:shadow-lg transform transition-transform hover:transform hover:scale-105'>
    <Link to = {`/productdetails/${product.id}/${product.category.name}`}>
 
   <img src={product.imageCover} alt="products"  className='h-[320px] m-auto'/>
-  <h3 className='text-green-700 px-4 mt-2'>{product.category.name}</h3>
-  <h3 className='text-black font-semibold mb-3 px-4'>{product.title.split(" ").slice(0,2).join(" ")}</h3>
+  <h3 className='text-green-700 px-2 mt-2'>{product.category.name}</h3>
+  <h3 className='text-black font-semibold mb-3 px-2'>{product.title.split(" ").slice(0,2).join(" ")}</h3>
   <div className='flex justify-between px-3'>
 
 <span className='px-2'> {product.price} EGP</span>

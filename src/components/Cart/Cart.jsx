@@ -149,10 +149,10 @@ useEffect(()=>{
  <div className='mx-5 p-5 lg:mx-10 lg:p-0'> 
     <img src={product.product.imageCover} alt="freshcart" className=' m-auto lg:w-[200px] lg:h-[260px] object-cover ' />
   </div>
-<div className='flex flex-col px-2 text-left capitalize lg:mx-10 lg:w-1/2 w-[85%] '>
+<div className='flex flex-col px-2 lg:text-left capitalize lg:mx-10 lg:w-1/2 w-[85%] '>
   <h2 className='text-2xl font-semibold'>{product.product.title}</h2>
   <h3 className='text-xl font-semibold p-2 text-green-500'>{product.price} EGP</h3>
-  <div className='flex flex-row items-center gap-2'>
+  <div className='flex flex-row items-center justify-center m-1'>
     <button onClick={()=>{deleteCartI(product.product.id)}} className='text-white bg-green-600 hover:text-white hover:bg-red-600 p-1 pe-2 rounded-lg w-[30%]'> 
       {deleteLoading && cId==product.product.id ?<i className="fas fa-spinner fa-spin"></i> :<div><i className="fa-solid fa-trash-can p-2" style={{color: 'white'}} />Remove</div>}
       </button>

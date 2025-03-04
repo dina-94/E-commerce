@@ -82,12 +82,12 @@ useEffect(() => {
   {allOrders?.length > 0 ?
    <div  className='w-full min-h-screen '>
     
-  <div className='lg:w-[90%] m-auto w-full mt-16 rounded-lg '>
+  <div className='lg:w-[95%] m-auto w-full mt-16 rounded-lg '>
 {allOrders.map((order)=> order.cartItems.length>0 ?
 
    <div key={order._id} className='' >
 
-    <div className="row flex-row items-center mt-3 mb-3 border border-spacing-3 p-2 lg:w-[95%] w-[95%] gap-1 m-auto border-green-400 rounded-xl">
+    <div className="row flex-row items-center mt-3 mb-3 border border-spacing-3 p-2 lg:w-[95%] w-[90%] gap-1 m-auto border-green-400 rounded-xl">
      <div className='row flex-row w-full justify-between items-center font-semibold text-2xl p-10 '>
       <h3 className='text-slate-700'>Total Order Price : <span className='text-green-600'>{order.totalOrderPrice} EGP</span></h3>
       <h3 className='text-slate-700'> Payment Method : <span className='text-green-600'>{order.paymentMethodType}</span></h3>
@@ -98,7 +98,7 @@ useEffect(() => {
 
 {order.cartItems.length> 0 ?order.cartItems.map((item)=>
    
-<div key={item._id} className='row flex lg:w-1/4 flex-col m-auto mb-2 bg-green-100 items-center border shadow-md border-spacing-2 border-green-100 rounded-2xl '>
+<div key={item._id} className='row flex lg:w-1/4 flex-col m-auto mb-2  bg-green-100 items-center border shadow-md border-spacing-2 border-green-100 rounded-2xl '>
 
 
   <div  className=" p-5 lg:p-0  "> 
